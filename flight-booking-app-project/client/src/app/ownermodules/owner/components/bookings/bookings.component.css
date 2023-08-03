@@ -1,0 +1,31 @@
+.bookings-container {
+  list-style-type: none;
+  padding: 40px;
+  height: 90vh;
+  overflow: auto;
+}
+li {
+  list-style-type: none;
+}
+th,
+td {
+  padding-right: 40px;
+}
+td,
+.c1 {
+  text-align: center;
+  vertical-align: middle;
+}
+.c1 {
+  list-style-type: decimal;
+}
+p {
+  margin-top: 13px;
+}
+#dic {
+  background-color: rgb(232, 191, 241);
+}
+
+.bookings-container {
+  background-color: blueviolet;
+}

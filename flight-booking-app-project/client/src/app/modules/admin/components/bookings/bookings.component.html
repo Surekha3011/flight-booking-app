@@ -1,0 +1,68 @@
+<ul class="bookings-container container pt-4">
+  <h1 align="center">Bookings</h1>
+  <div class="text-center" *ngIf="isLoading" style="margin-top: 150px">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <li *ngFor="let booking of bookings" class="card mb-4 p-4">
+    <div id="dic"><strong>Booking ID:</strong> {{ booking._id }}</div>
+    <div id="dic"><strong>User:</strong> {{ booking.user }}</div>
+    <hr />
+    <table align="center">
+      <tr>
+        <th><strong>FLIGHT</strong></th>
+        <th><strong>PASSENGERS</strong></th>
+        <th><strong>TOTALPRICE</strong></th>
+        <th><strong>DATE</strong></th>
+        <th><strong>JOURNEYDATE</strong></th>
+        <th><strong>SEATS</strong></th>
+        <th><strong>PAYMENTMETHOD</strong></th>
+      </tr>
+      <tr>
+        <td><hr /></td>
+        <td><hr /></td>
+        <td><hr /></td>
+        <td><hr /></td>
+        <td><hr /></td>
+        <td><hr /></td>
+        <td><hr /></td>
+      </tr>
+      <tr>
+        <td>
+          <div>{{ booking.flight.flightNumber }}</div>
+        </td>
+        <td>
+          <div>
+            <ul>
+              <p *ngFor="let passenger of booking.passengers">
+                {{ passenger }}
+              </p>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ booking.totalPrice }}
+          </div>
+        </td>
+        <td>
+          <div>{{ booking.date | date }}</div>
+        </td>
+        <td>
+          <div>{{ booking.journeyDate | date }}</div>
+        </td>
+        <td>
+          <div>
+            <ul>
+              <p *ngFor="let seat of booking.seatNumbers">{{ seat.seat }}</p>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div>{{ booking.paymentMethod }}</div>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>

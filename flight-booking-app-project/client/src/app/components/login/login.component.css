@@ -1,0 +1,42 @@
+body {
+  background-image: url("https://img.freepik.com/free-photo/passenger-model-airplane-blue-background_94046-2760.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+.login-container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  overflow: auto;
+  width: 100%;
+}
+@media screen and (max-width: 998px) {
+  .login-container {
+    width: 100%;
+  }
+}
+
+.card {
+  padding: 40px;
+  width: 40%;
+  border: none;
+  background-color: rgb(167, 176, 185);
+}
+@media screen and (max-width: 998px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}

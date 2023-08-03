@@ -1,0 +1,57 @@
+<ul class="flights-container container pt-4">
+  <h1 align="center">Flights</h1>
+  <section id="#ic"><p>THESE ARE OUR WONDERFUL FLIGHT SERVICES</p></section>
+  <div class="text-center" *ngIf="isLoading" style="margin-top: 150px">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <li *ngFor="let flight of flights">
+    <div class="card mb-4">
+      <div class="card-body">
+        <table align="center">
+          <tr>
+            <th><h5 class="card-title">FLIGHT NAME</h5></th>
+            <th><h5 class="card-title">FLIGHT NUMBER</h5></th>
+            <th><h5 class="card-title">DEPARTURE</h5></th>
+            <th><h5 class="card-title">DESTINATION</h5></th>
+          </tr>
+          <tr>
+            <td>
+              <h5 class="card-text grid-item">{{ flight.airline }}</h5>
+            </td>
+            <td>
+              <p class="card-text grid-item">{{ flight.flightNumber }}</p>
+            </td>
+            <td>
+              <p class="card-text grid-item">{{ flight.origin }}</p>
+            </td>
+            <td>
+              <p class="card-text grid-item">{{ flight.destination }}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </li>
+</ul>
+<!--
+<ul class="flights-container container pt-4">
+  <h1>Flights</h1>
+  <div class="text-center" *ngIf="isLoading" style="margin-top: 150px">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <li *ngFor="let flight of flights">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ flight.airline }}</h5>
+        <p class="card-text">Flight number: {{ flight.flightNumber }}</p>
+        <p class="card-text">Departure: {{ flight.origin }}</p>
+        <p class="card-text">Destination: {{ flight.destination }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
+-->
